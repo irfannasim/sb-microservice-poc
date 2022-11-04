@@ -1,0 +1,9 @@
+com\infotech\dpt\dl\entity\BaseEntity.class
+com\infotech\dpt\repository\DepartmentRepository.class
+com\infotech\dpt\dl\dto\DepartmentDTO.class
+com\infotech\dpt\dl\entity\Department.class
+com\infotech\dpt\service\DepartmentService.class
+com\infotech\dpt\DptServiceApplication.class
+com\infotech\dpt\dl\dto\BaseDTO.class
+com\infotech\dpt\api\DepartmentAPI.class
+com\infotech\dpt\util\AppUtility.class

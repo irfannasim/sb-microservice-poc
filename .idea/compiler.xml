@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="api-gateway" />
+        <module name="dpt-service" />
+        <module name="discovery-server" />
+        <module name="um-service" />
+        <module name="auth-server" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="test" target="1.8" />
+      <module name="tsttst" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="api-gateway" options="-parameters" />
+      <module name="auth-server" options="-parameters" />
+      <module name="discovery-server" options="-parameters" />
+      <module name="dpt-service" options="-parameters" />
+      <module name="sb-microservice-poc" options="" />
+      <module name="test" options="-parameters" />
+      <module name="tsttst" options="-parameters" />
+      <module name="um-service" options="-parameters" />
+    </option>
+  </component>
+</project>

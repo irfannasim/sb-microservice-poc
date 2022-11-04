@@ -1,0 +1,10 @@
+com\infotech\um\dl\entity\User.class
+com\infotech\um\api\UserAPI.class
+com\infotech\um\service\UserService.class
+com\infotech\um\config\WebClientConfig.class
+com\infotech\um\repository\UserRepository.class
+com\infotech\um\dl\dto\BaseDTO.class
+com\infotech\um\dl\entity\BaseEntity.class
+com\infotech\um\dl\dto\DepartmentDTO.class
+com\infotech\um\dl\dto\UserDTO.class
+com\infotech\um\UmServiceApplication.class

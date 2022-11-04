@@ -1,0 +1,233 @@
+{
+	"info": {
+		"_postman_id": "67d3ea16-0fee-46f1-812c-32dda9476136",
+		"name": "SpringBoot Microservice POC",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16811322"
+	},
+	"item": [
+		{
+			"name": "Get All Users",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "bearer VBWGoZZjiuOmrsGpVvIdPHuTsAQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9000/um/user/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"um",
+						"user",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"irfan\",\r\n    \"username\":\"irfan\",\r\n    \"email\":\"irfan@yopmail.com\",\r\n    \"dptId\": 1,\r\n    \"createdOn\":\"2022-11-03T13:26:56+05:00\",\r\n    \"updatedOn\":\"2022-11-03T13:26:56+05:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9001/um/user/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9001",
+					"path": [
+						"um",
+						"user",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Departments",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer VBWGoZZjiuOmrsGpVvIdPHuTsAQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9000/dpt/department/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"dpt",
+						"department",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Department by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9002/dpt/department/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9002",
+					"path": [
+						"dpt",
+						"department",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Department",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"HR\",\r\n    \"code\":\"HR\",\r\n     \"createdOn\":\"2022-11-03T13:26:56+05:00\",\r\n    \"updatedOn\":\"2022-11-03T13:26:56+05:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9002/dpt/department/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9002",
+					"path": [
+						"dpt",
+						"department",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Auth Token ",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "secret",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "client",
+							"type": "string"
+						},
+						{
+							"key": "showPassword",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/oauth/token?username=irfan&password=irfan&grant_type=password",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"oauth",
+						"token"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "irfan"
+						},
+						{
+							"key": "password",
+							"value": "irfan"
+						},
+						{
+							"key": "grant_type",
+							"value": "password"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Unauth UM service",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "bearer KHyr-kpkbwlcUy51L50kRfsHySE",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9000/um/un-auth/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"um",
+						"un-auth",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
